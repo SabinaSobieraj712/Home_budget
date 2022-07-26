@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Domowy budżet</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arima:wght@400;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="style.css" />
+		<link rel="shortcut icon" href="money-chinese-zodiac.png" type="image/x-icon" />
+	</head>
+	<body>
+		<main>
+			
+			<div class="main-container">
+				<div class="logo">
+					<img src="image/money-chinese-zodiac.png" width="300vh" height="100%">
+					</div>
+				<h1 id="amount-to-spend">Domowy budżet</h1>
+				<div class="box-container">
+					<div class="box">
+						<p class="top-desc">PRZYCHODY</p>
+						<form>
+							<input
+								type="text"
+								placeholder="Nazwa przychodu"
+								id="income-name"
+								class="text-input1"
+								required
+							/>
+							<input
+								type="number"
+								placeholder="Kwota"
+								class="text-input1"
+								id="income-amount"
+								required
+							/>
+							<input
+								type="submit"
+								class="submit-input1"
+								id="income-btn"
+								value="Dodaj"
+							/>
+						</form>
+						<hr />
+						<ul id="incomes-ul"></ul>
+						<p class="bottom-desc">
+							Suma przychodów: <span id="income-sum">0</span> zł
+						</p>
+					</div>
+					<div class="box">
+						<p class="top-desc">WYDATKI</p>
+						<form>
+							<input
+								type="text"
+								placeholder="Nazwa wydatku"
+								class="text-input2"
+								id="expense-name"
+								required
+							/>
+							<input
+								type="number"
+								placeholder="Kwota"
+								class="text-input2"
+								id="expense-amount"
+								required
+							/>
+							<input
+								type="submit"
+								class="submit-input2"
+								id="expense-btn"
+								value="Dodaj"
+							/>
+						</form>
+						<ul id="expenses-ul"></ul>
+						<hr />
+						<p class="bottom-desc">
+							Suma wydatków: <span id="expense-sum">0</span> zł
+						</p>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"
+			referrerpolicy="no-referrer"
+		></script>
+		<script type="module" src="js/script.js"></script>
+	</body>
+</html>

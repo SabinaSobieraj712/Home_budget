@@ -1,0 +1,277 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	height: 100%;
+	font-family: 'Arima', cursive;
+	transition: 0.4s ease-in-out;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+a {
+	text-decoration: none;
+}
+
+input,
+button {
+	border: none;
+	cursor: pointer;
+	font-family: inherit;
+}
+
+::placeholder {
+	color: #EDC967;
+	opacity: 0.75;
+}
+
+:-ms-input-placeholder {
+	color: #EDC967;
+}
+
+::-ms-input-placeholder {
+	color: #EDC967;
+}
+
+.logo {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.main-container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient( rgba(0,0,0,0.5), rgba(0, 0, 0, 0.1) ),url("image/closeup-shot-of-a-gray-rough-concrete-background.jpg") no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+
+.main-container h1 {
+	font-size: 3rem;
+	text-transform: uppercase;
+	color: #EDC967;
+	text-shadow: 0px 0px 7px rgba(33, 19, 4, 0.897);
+	text-align: center;
+}
+
+.box-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+}
+
+.box {
+	width: 90%;
+	max-width: 95%;
+	min-height: 400px;
+	display: flex;
+	flex-direction: column;
+	border-radius: 7px;
+	-webkit-backdrop-filter: brightness(70%); 
+	backdrop-filter: brightness(70%);
+	padding: 1rem;
+	transition: all 0.4s ease-in-out;
+	margin: 0 20px 20px 20px;
+}
+
+form {
+	display: flex;
+	justify-content: space-between;
+	/* flex-wrap: wrap; */
+	padding: 1rem 0;
+	min-height: 100px;
+}
+
+.top-desc {
+	font-size: 2.5rem;
+	margin: 1.25rem;
+	font-weight: bold;
+	display: flex;
+	flex-direction: row;
+	color: #EDC967;
+}
+
+.text-input1,
+.text-input2 {
+	width: 75%;
+	font-size: 1.75rem;
+	padding: 0.5rem;
+	background-color: transparent;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+	color: #EDC967;
+}
+
+.text-input1:focus,
+.submit-input1:focus {
+	outline: none;
+	border-color: #EDC967;
+	box-shadow: 0 0 10px #EDC967;
+}
+
+.submit-input1,
+.submit-input2 {
+	font-size: 1.75rem;
+	padding: 0.75rem 2rem;
+	color: black;
+}
+
+.text-input2:focus,
+.submit-input2:focus {
+	outline: none;
+	border-color: #EDC967;
+	box-shadow: 0 0 10px #EDC967;
+}
+
+.submit-input1 {
+	background: rgb(237,201,38);
+	background: radial-gradient(circle, rgba(237,201,38,1) 10%, rgba(146,111,52,1) 100%);
+}
+
+.submit-input2 {
+	background: rgb(237,201,38);
+	background: radial-gradient(circle, rgba(237,201,38,1) 10%, rgba(146,111,52,1) 100%);}
+
+ul {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.list {
+	margin: 0 auto;
+	font-size: 1.5rem;
+	width: 93%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	color: #EDC967;
+}
+
+button {
+	font-size: 1.5rem;
+	padding: 1rem 2rem;
+}
+
+.edit,
+.delete {
+	color: #EDC967;
+	margin: 0.25rem;
+	min-width: 82px;
+}
+
+.edit {
+	background-color: #EDC967;
+	color: black;
+}
+
+.delete {
+	background-color: #EDC967;
+	color: black;
+}
+
+hr {
+	margin: 1.5rem auto;
+	border: none;
+	height: 1px;
+	background-color: #EDC967;
+	width: 100%;
+}
+
+.bottom-desc {
+	font-size: 2rem;
+	margin-top: auto;
+	padding: 1rem;
+	text-transform: uppercase;
+	color: #EDC967;
+}
+
+@media screen and (min-width: 996px) {
+	.main-container h1 {
+		font-size: 6rem;
+	}
+
+	.box-container {
+		flex-direction: row;
+		align-items: baseline;
+	}
+
+	.top-desc {
+		font-size: 3.25rem;
+		margin: 1.75rem;
+	}
+
+	.text-input1,
+	.text-input2 {
+		font-size: 2rem;
+		padding: 0.5rem;
+	}
+
+	.submit-input1,
+	.submit-input2 {
+		font-size: 2rem;
+		padding: 1rem 2.5rem;
+		transition: 0.3s ease-in-out;
+	}
+
+	.submit-input1:hover {
+		background-color: #EDC967;
+	}
+
+	.submit-input2:hover {
+		background-color: #EDC967;
+	}
+
+	.list {
+		margin-top: 0.5rem;
+		font-size: 2.25rem;
+	}
+
+	button {
+		margin: 0 0.5rem;
+		font-size: 1.5rem;
+		padding: 1rem 2rem;
+	}
+
+	.edit,
+	.delete {
+		font-size: 2rem;
+		transition: 0.3s ease-in-out;
+		color: black;
+	}
+
+	.edit:hover {
+		background-color: #EDC967;
+	}
+
+	.delete:hover {
+		background-color: #EDC967;
+	}
+
+	.bottom-desc {
+		font-size: 2.75rem;
+	}
+}
+
+@media (max-width: 1200px) {
+	form {
+		flex-wrap: wrap;
+	}
+}
