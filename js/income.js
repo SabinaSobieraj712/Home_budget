@@ -35,9 +35,9 @@ export function incomeButton(element){
 			editBtn.addEventListener("click", () => {
 
 				let editName = createSpanandAddToDoc(id, name, "data-name=");
-				let editAmount = createSpanandAddToDoc(id, amount, "data-amount");
+				let editAmount = createSpanandAddToDoc(id, amount, "data-amount=");
 
-                editIncomeButtonsSettings(editName, editAmount) 
+                editIncomeButtonsSettings(span, editName, editAmount, deleteBtn,editBtn) 
 				const confirmEditBtn = createConfirmButton();
 
 				confirmEditBtn.addEventListener("click", () => {
@@ -53,11 +53,11 @@ export function incomeButton(element){
 };
 
 function createSpanandAddToDoc(id, data, stringSetting ) {
-    document.querySelector(`span[data-id="${id}"] span[${stringSetting}"${data}"]`);
+    return document.querySelector(`span[data-id="${id}"] span[${stringSetting}"${data}"]`);
 }
 
 
-function editIncomeButtonsSettings(editName, editAmount) {
+function editIncomeButtonsSettings(span,editName, editAmount, deleteBtn,editBtn) {
     editName.contentEditable = true;
     editAmount.contentEditable = true;
     editName.style.backgroundColor =buttonsActiveBackgroundColor;

@@ -38,9 +38,9 @@ export function expensesButton(element) {
 			editBtn.addEventListener("click", () => {
 
 				let editName = createSpanandAddToDoc(id, name, "data-name=");
-				let editAmount = createSpanandAddToDoc(id, amount, "data-amount");
+				let editAmount = createSpanandAddToDoc(id, amount, "data-amount=");
 
-                editExpenseButtonsSettings(editName, editAmount)
+                editExpenseButtonsSettings(span, editName, editAmount, deleteBtn,editBtn)
 				let confirmEditBtn = createConfirmButton();
 
 				confirmEditBtn.addEventListener("click", () => {
@@ -83,7 +83,7 @@ function createConfirmButton() {
 }
 
 
-function editExpenseButtonsSettings(editName, editAmount) {
+function editExpenseButtonsSettings(span, editName, editAmount, deleteBtn,editBtn) {
     editName.contentEditable = true;
     editAmount.contentEditable = true;
     editName.style.backgroundColor = buttonsActiveBackgroundColor;
@@ -93,7 +93,7 @@ function editExpenseButtonsSettings(editName, editAmount) {
 }
 
 function createSpanandAddToDoc(id, data, stringSetting ) {
-    document.querySelector(`span[data-id="${id}"] span[${stringSetting}"${data}"]`);
+   return document.querySelector(`span[data-id="${id}"] span[${stringSetting}"${data}"]`);
 }
 
 function removeExpense(id, li, expensesDOM){
